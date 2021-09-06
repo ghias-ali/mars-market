@@ -16,7 +16,7 @@ import { Container } from '@material-ui/core';
 import './style.css';
 const useStyles = makeStyles({
   root: {
-    maxWidth: 250,
+    maxWidth: 300,
   },
 });
 
@@ -27,8 +27,8 @@ export default function ImgMediaCard() {
     <Container>
       <Row className='themainrow'>
         {products.map((user) => (
-          <Col xs={20} sm={8} md={8} lg={6}>
-            <Card className={classes.root}>
+          <Col className='columnn' xs={24} sm={12} md={8} lg={6}>
+            <Card style={{ width: '90%' }} className={classes.root}>
               <CardActionArea>
                 <CardMedia
                   component='img'

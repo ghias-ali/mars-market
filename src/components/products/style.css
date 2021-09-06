@@ -6,3 +6,8 @@
   display: flex;
   justify-content: center;
 }
+.columnn {
+  margin-top: 2rem;
+  display: flex !important;
+  justify-content: center !important;
+}

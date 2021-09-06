@@ -1,4 +1,5 @@
 import React from 'react';
+import { Drawer } from 'antd';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,7 +12,6 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import TranslateIcon from '@material-ui/icons/Translate';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Button from '@material-ui/core/Button';
 import './style.css';
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: 'none',
+    display: 'block',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -81,24 +81,28 @@ export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorEl1, setAnchorEl1] = React.useState(null);
-  const [anchorEl2, setAnchorEl2] = React.useState(null);
+  const [visible, setVisible] = React.useState(false);
 
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMenuOpen1 = Boolean(anchorEl1);
-  const isMenuOpen2 = Boolean(anchorEl2);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleProfileMenuOpen1 = (event) => {
     setAnchorEl1(event.currentTarget);
-  };
-  const handleProfileMenuOpen2 = (event) => {
-    setAnchorEl2(event.currentTarget);
   };
 
   const handleMobileMenuClose = () => {
@@ -114,35 +118,10 @@ export default function PrimarySearchAppBar() {
     setAnchorEl1(null);
     handleMobileMenuClose();
   };
-  const handleMenuClose2 = () => {
-    setAnchorEl2(null);
-    handleMobileMenuClose();
-  };
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-
-  const menuId2 = 'primary-search-account-menu';
-  const renderMenu2 = (
-    <Menu
-      className='cart_box'
-      anchorEl={anchorEl2}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={menuId2}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMenuOpen2}
-      onClose={handleMenuClose2}
-    >
-      <MenuItem onClick={handleMenuClose2}>English</MenuItem>
-      <MenuItem onClick={handleMenuClose2}>Spanish</MenuItem>
-      <MenuItem onClick={handleMenuClose2}>Russian</MenuItem>
-      <Button variant='contained' color='primary' href='#contained-buttons'>
-        Link
-      </Button>
-    </Menu>
-  );
 
   const menuId1 = 'primary-search-account-menu';
   const renderMenu1 = (
@@ -225,17 +204,21 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position='static'>
         <Toolbar>
-          <Typography className={classes.title} variant='h6' noWrap>
+          <Typography
+            style={{ color: '#fff' }}
+            className={classes.title}
+            variant='h6'
+            noWrap
+          >
             MARS-MARKET
           </Typography>
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton
-              onClick={handleProfileMenuOpen2}
+              onClick={showDrawer}
               aria-label='show 3 new notifications'
               edge='end'
-              aria-controls={menuId2}
               aria-haspopup='true'
               color='inherit'
             >
@@ -263,6 +246,16 @@ export default function PrimarySearchAppBar() {
             >
               <TranslateIcon />
             </IconButton>
+            <Drawer
+              title='Cart'
+              placement='right'
+              onClose={onClose}
+              visible={visible}
+            >
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+            </Drawer>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -280,7 +273,6 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
       {renderMenu1}
-      {renderMenu2}
     </div>
   );
 }
