@@ -1,13 +1,12 @@
 import './App.css';
-import Navbar from './components/navbar/index';
-import Products from './components/products/Products';
-import Promotion from './components/promotion/Promotion';
+// import Navbar from './components/navbar/index';
+// import Products from './components/products/Products';
+// import Promotion from './components/promotion/Promotion';
+import Home from './container/home/Home';
 function App() {
   return (
     <div className='App'>
-      <Navbar />
-      <Promotion />
-      <Products />
+      <Home />
     </div>
   );
 }

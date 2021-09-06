@@ -1,0 +1,10 @@
+.headerrrcss {
+  width: 100vw !important;
+}
+.ant-layout-header {
+  height: 64px;
+  padding: 0 !important;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 64px;
+  background: #001529;
+}

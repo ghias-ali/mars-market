@@ -5,3 +5,7 @@
 .App {
   background-color: #edeff1;
 }
+.displayflexdiv {
+  display: flex;
+  align-items: center;
+}

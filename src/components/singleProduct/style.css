@@ -1,0 +1,41 @@
+.fullpageview {
+  margin-top: 1rem;
+  background-color: #fff;
+}
+.imageContainer {
+  padding-top: 1rem;
+}
+
+.ratingdic {
+  display: flex;
+}
+.priceheading {
+  font-size: 2rem;
+  color: #f57224;
+}
+.priceheading1 {
+  font-size: 2rem;
+}
+.inputnumber {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+}
+.buttoncarts {
+  background-color: #f57224 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.buttoncarts1 {
+  background-color: #2abbe8 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.buttonsdiv {
+  display: flex;
+  justify-content: space-evenly;
+}
