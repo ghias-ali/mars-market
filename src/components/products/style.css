@@ -1,0 +1,8 @@
+.cardactionn {
+  display: flex;
+  justify-content: space-between;
+}
+.themainrow {
+  display: flex;
+  justify-content: center;
+}
