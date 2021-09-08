@@ -12,6 +12,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import TranslateIcon from '@material-ui/icons/Translate';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Cart from '../cart/Cart';
 import './style.css';
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -252,9 +253,9 @@ export default function PrimarySearchAppBar() {
               onClose={onClose}
               visible={visible}
             >
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
+              <div>
+                <Cart />
+              </div>
             </Drawer>
           </div>
           <div className={classes.sectionMobile}>

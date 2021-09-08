@@ -1,0 +1,23 @@
+.fullpageview {
+  margin-top: 1rem;
+  background-color: #fff;
+  padding-top: 1rem;
+}
+.imageContainer {
+  padding-top: 1rem;
+}
+.checkoutcontainerss {
+  border: solid #dadada 1px !important;
+}
+.tablediv {
+  overflow-x: scroll;
+}
+.formdiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.ordersdetaolsdata {
+  display: flex;
+  justify-content: space-between;
+}
