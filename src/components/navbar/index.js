@@ -13,6 +13,7 @@ import TranslateIcon from '@material-ui/icons/Translate';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Cart from '../cart/Cart';
+
 import './style.css';
 const useStyles = makeStyles((theme) => ({
   grow: {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Layout } from 'antd';
 import Navbar from '../../components/navbar/index';
-import Promotion from '../../components/promotion/Promotion';
+// import Promotion from '../../components/promotion/Promotion';
 // import SingleProduct from '../../components/singleProduct/singleProduct';
-// import Checkout from '../../components/checkout/Checkout';
-import Products from '../../components/products/Products';
+import Checkout from '../../components/checkout/Checkout';
+// import Products from '../../components/products/Products';
 import './style.css';
 const { Header, Content } = Layout;
-function Home() {
+function Checkouta() {
   return (
     <div>
       {' '}
@@ -16,12 +16,11 @@ function Home() {
           <Navbar />
         </Header>
         <Content>
-          <Promotion />
-          <Products />
+          <Checkout />
         </Content>
       </Layout>
     </div>
   );
 }
 
-export default Home;
+export default Checkouta;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Avatar } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import './style.css';
 function Cart() {
   return (
@@ -142,7 +143,9 @@ function Cart() {
         <CloseOutlined style={{ color: 'red', fontSize: '18px' }} />
       </div>
       <div className='footer12'>
-        <button className='checkoutbuttonn'>Checkout</button>
+        <Link to='/checkout'>
+          <button className='checkoutbuttonn'>Checkout</button>
+        </Link>
       </div>
     </div>
   );

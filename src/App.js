@@ -1,12 +1,27 @@
 import './App.css';
-// import Navbar from './components/navbar/index';
-// import Products from './components/products/Products';
-// import Promotion from './components/promotion/Promotion';
+import Checkouta from './container/checkout/Checkout';
 import Home from './container/home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 function App() {
   return (
     <div className='App'>
-      <Home />
+      <Router>
+        <Switch>
+          <Route path='/checkout'>
+            <Checkouta />
+          </Route>
+          <Route path='/products'>
+            <Home />
+          </Route>
+          <Redirect from='/' to='/products' />
+          <Redirect from='*' to='/' />
+        </Switch>
+      </Router>{' '}
     </div>
   );
 }
