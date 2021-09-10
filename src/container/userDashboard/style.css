@@ -1,0 +1,34 @@
+#components-layout-demo-fixed-sider .logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
+  .a{
+      margin-top: 5%!important;
+  }
+  .a1{
+    text-align: center!important;
+      font-size: large;
+      height: 500px;
+  width: 50%;
+  }
+  .a2{
+    div {
+      display: flex;
+      align-items: right;
+    }
+  }
+  .a3{
+    color: white
+  }
+ .a4{
+   display:flex;
+   justify-content:space-evenly !important;
+ }
+ .a5{
+   display:flex;
+ }
+ 
